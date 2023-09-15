@@ -1,4 +1,5 @@
 pub mod object;
 pub mod heap;
-mod native;
+pub mod native;
 pub mod nullability;
+pub mod interning;

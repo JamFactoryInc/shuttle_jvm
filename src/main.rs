@@ -4,11 +4,14 @@
 extern crate core;
 
 use crate::class_loader::ClassLoader;
+use crate::vm::native::NativeOverrides;
 
 pub mod class_loader;
 mod vm;
 
 fn main() {
+    NativeOverrides::init();
+
     let bytes = ClassLoader::read(r#"D:\Codin\Java\shuttle_jvm_testing\out\production\shuttle_jvm_testing\Main.class"#).unwrap();
     let class = ClassLoader::parse(bytes.as_slice());
     

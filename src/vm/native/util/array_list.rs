@@ -5,7 +5,5 @@ pub struct ArrayList {
     capacity: u32,
     pointer: u32,
 }
-impl JavaObject for ArrayList {
 
-}
 
